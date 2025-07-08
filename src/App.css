@@ -78,39 +78,16 @@ body {
     width: 100%;
 }
 
-.commonUsed-container > div:first-child {
-    border-top-left-radius: .8rem;
-}
-
-.commonUsed-container > div:nth-child(2) {
-    border-top-right-radius: .8rem;
-}
-
-
-.odd-children > div:nth-last-child(3) {
-    border-bottom-left-radius: .8rem;
-}
-
-.odd-children > div:nth-last-child(2) {
-    border-bottom-right-radius: .8rem;
-}
-
-
-.odd-children > div:nth-last-child(1) {
-    grid-column: span 2;
-    margin-top: 10px;
+.commonUsed-container > div {
     border-radius: .8rem;
 }
 
-
-div:not(.odd-children) > div:nth-last-child(1) {
+.odd-children .ButtonAdd{
     grid-column: span 1;
-    margin-top: 0;
-    border-bottom-right-radius: .8rem;
 }
 
-div:not(.odd-children) > div:nth-last-child(2) {
-    border-bottom-left-radius: .8rem;
+.odd-children .ButtonAdd{
+    grid-column: span 2;
 }
 
 
@@ -200,7 +177,7 @@ div:not(.odd-children) > div:nth-last-child(2) {
 .card {
     height: 60px;
   background: none;
-  border-radius: .8rem;
+  /* border-radius: .8rem; */
   display: flex;
   justify-content: center;
   align-items: center;

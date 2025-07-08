@@ -9,7 +9,7 @@ function App() {
     const [ websites, setWebsites ] = useState([]);
     const dialogRef = useRef(null);
     const containerRef = useRef(null);
-   const cardsRef = useRef([]);
+    const cardsRef = useRef([]);
    
     console.log(cardsRef.current)
     useEffect(() => {
@@ -107,11 +107,11 @@ function App() {
                 
                 {
                 
-                    websites.map((url, index) => <Items url={url} handleOpenWebsite={handleOpenWebsite} handleDelete={handleDelete} cardsRef={cardsRef} index={index} /> )
+                    websites.map((url, index) => <Items url={url} key={url} handleOpenWebsite={handleOpenWebsite} handleDelete={handleDelete} cardsRef={cardsRef} index={index} /> )
                 }
                 
                 
-                <div className="card" 
+                <div className="card ButtonAdd" 
                     onClick={handleOpenDialog}
                     ref={(el) => (cardsRef.current[cardsRef.current.length+1] = el)}
                 >
